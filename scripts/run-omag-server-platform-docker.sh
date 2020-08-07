@@ -1,4 +1,4 @@
-HOST_LIBS_DIRECTORY=$0
+HOST_LIBS_DIRECTORY=$1
 HOST_PORT=19443
 
 if [ -z "$HOST_LIBS_DIRECTORY" ]
@@ -15,8 +15,9 @@ else
   echo "  - /opt/egeria/server/lib < $HOST_LIBS_DIRECTORY"
 
   docker run \
+    -d \
     -p ${HOST_PORT}:9443 \
     --rm \
-    -v ${HOST_LIBS_FOLDER}:/opt/egeria/server/lib \
+    -v ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
     odpi/egeria
 fi
