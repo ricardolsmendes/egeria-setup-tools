@@ -18,7 +18,7 @@
 1. Run the OMAG Server Platform using Docker:
 
    ```sh
-   ./run-omag-server-platform-docker.sh <HOST-LIBS-FOLDER>
+   ./run-omag-server-platform-docker.sh <HOST-LIBS-DIRECTORY>
    ```
 
-Back to [Home](..)
+Back to [Home](../)
