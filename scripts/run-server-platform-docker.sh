@@ -4,6 +4,7 @@ HOST_PORT=19443
 if [ -z "$HOST_LIBS_DIRECTORY" ]
 then
   echo No volumes...
+  echo
 
   docker run \
     -d \
@@ -12,7 +13,8 @@ then
     odpi/egeria
 else
   echo Volumes:
-  echo "  - /opt/egeria/server/lib < $HOST_LIBS_DIRECTORY"
+  echo "  - $HOST_LIBS_DIRECTORY:/opt/egeria/server/lib"
+  echo
 
   docker run \
     -d \
