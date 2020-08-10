@@ -1,5 +1,5 @@
 HOST_LIBS_DIRECTORY=$1
-HOST_PORT=19443
+HOST_HTTPS_PORT=19443
 
 if [ -z "$HOST_LIBS_DIRECTORY" ]
 then
@@ -8,7 +8,7 @@ then
 
   docker run \
     -d \
-    -p ${HOST_PORT}:9443 \
+    -p ${HOST_HTTPS_PORT}:9443 \
     --rm \
     odpi/egeria
 else
@@ -18,7 +18,7 @@ else
 
   docker run \
     -d \
-    -p ${HOST_PORT}:9443 \
+    -p ${HOST_HTTPS_PORT}:9443 \
     --rm \
     -v ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
     odpi/egeria
