@@ -10,6 +10,7 @@ then
     --detach \
     --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
+    --tty \
     odpi/egeria
 else
   echo Volumes:
@@ -20,6 +21,7 @@ else
     --detach \
     --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
+    --tty \
     --volume ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
     odpi/egeria
 fi
