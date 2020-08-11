@@ -5,5 +5,5 @@ SERVER_ID=$2
 
 curl \
   --insecure \
-  -X \
-  POST "https://${HOST}:${HTTPS_PORT}/open-metadata/admin-services/users/${USER_ID}/servers/${SERVER_ID}/instance"
+  --request POST \
+  "https://${HOST}:${HTTPS_PORT}/open-metadata/admin-services/users/${USER_ID}/servers/${SERVER_ID}/instance"

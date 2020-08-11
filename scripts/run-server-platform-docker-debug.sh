@@ -8,10 +8,10 @@ then
   echo
 
   docker run \
-    -d \
-    -e JAVA_DEBUG=1 \
-    -p ${HOST_DEBUG_PORT}:5005 \
-    -p ${HOST_HTTPS_PORT}:9443 \
+    --detach \
+    --env JAVA_DEBUG=1 \
+    --publish ${HOST_DEBUG_PORT}:5005 \
+    --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
     odpi/egeria
 else
@@ -20,11 +20,11 @@ else
   echo
 
   docker run \
-    -d \
-    -e JAVA_DEBUG=1 \
-    -p ${HOST_DEBUG_PORT}:5005 \
-    -p ${HOST_HTTPS_PORT}:9443 \
+    --detach \
+    --env JAVA_DEBUG=1 \
+    --publish ${HOST_DEBUG_PORT}:5005 \
+    --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
-    -v ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
+    --volume ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
     odpi/egeria
 fi

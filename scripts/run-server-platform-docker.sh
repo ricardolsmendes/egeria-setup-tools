@@ -7,8 +7,8 @@ then
   echo
 
   docker run \
-    -d \
-    -p ${HOST_HTTPS_PORT}:9443 \
+    --detach \
+    --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
     odpi/egeria
 else
@@ -17,9 +17,9 @@ else
   echo
 
   docker run \
-    -d \
-    -p ${HOST_HTTPS_PORT}:9443 \
+    --detach \
+    --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
-    -v ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
+    --volume ${HOST_LIBS_DIRECTORY}:/opt/egeria/server/lib \
     odpi/egeria
 fi
