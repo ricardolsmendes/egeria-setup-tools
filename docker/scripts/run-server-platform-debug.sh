@@ -1,6 +1,8 @@
 HOST_LIBS_DIRECTORY=$1
+
+# Ports to be published by the host machine.
 HOST_DEBUG_PORT=5005
-HOST_HTTPS_PORT=19443
+HOST_HTTPS_PORT=9443
 
 if [ -z "$HOST_LIBS_DIRECTORY" ]
 then
