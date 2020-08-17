@@ -5,4 +5,5 @@ Metadata and Governance](https://egeria.odpi.org) ecosystem.
 
 ## Instructions
 
-- [Scripts](./scripts)
+- [cURL](./curl)
+- [Docker | scripts](./docker/scripts)
