@@ -23,8 +23,8 @@ else
   echo
 
   docker run \
-    --detach \
     --env JAVA_DEBUG=1 \
+    --env LOGGING_LEVEL_ORG_ODPI_EGERIA_CONNECTORS_GOOGLE_DATACATALOG=DEBUG \
     --publish ${HOST_DEBUG_PORT}:5005 \
     --publish ${HOST_HTTPS_PORT}:9443 \
     --rm \
